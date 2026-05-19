@@ -1,0 +1,57 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: resto
+
+  datasource:
+    url: jdbc:mysql://localhost:3333/restoo
+    username: root
+    password: 1111
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show-sql: true
+        properties:
+          dialect: org.hibernate.dialect.MySQL8Dialect
+
+  task:
+    execution:
+      pool:
+        core-size: 5
+        max-size: 10
+        queue-capacity: 100
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: elkayou249@gmail.com
+    password: "rxtu iijw awzk stmz"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+project:
+  profile: profile
+base:
+  url: "http://localhost:8080"
+
+jwt:
+  secret: "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970"
+  expiration: 86400000  # 24 hours in milliseconds
+  refresh-expiration: 604800000  # 7 days in milliseconds
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui.html"
+    enabled: true
+    operations-sorter: "method"
+    tags-sorter: "alpha"
+  api-docs:
+    path: "/v3/api-docs"
