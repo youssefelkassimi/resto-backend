@@ -28,8 +28,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: elkayou249@gmail.com
-    password: "rxtu iijw awzk stmz"
+    username: #put you mail service
+    password: #put the password
     properties:
       mail:
         smtp:
@@ -43,7 +43,7 @@ base:
   url: "http://localhost:8080"
 
 jwt:
-  secret: "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970"
+  secret: "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970" # use your secret key
   expiration: 86400000  # 24 hours in milliseconds
   refresh-expiration: 604800000  # 7 days in milliseconds
 
